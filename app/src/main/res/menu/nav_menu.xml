@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Home"
+        android:checked="true">
+    </item>
+
+    <item android:title="Category"
+        android:checked="true">
+    </item>
+
+    <item android:title="Favourite"
+        android:checked="true">
+    </item>
+
+    <item android:title="Cart"
+        android:checked="true">
+    </item>
+</menu>

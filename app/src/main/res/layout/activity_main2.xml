@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#03A9F4"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ekart"
+            android:textSize="25sp"
+            android:layout_marginStart="35dp"
+            android:layout_marginVertical="15dp"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/search_bg"
+            android:drawableStart="@drawable/baseline_youtube_searched_for_24"
+            android:drawablePadding="12dp"
+            android:hint="Search"
+            android:paddingHorizontal="12dp"
+            android:textColorHint="#5E5E5E"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginBottom="5dp" />
+    </LinearLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/mid"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearanceOverlay="@style/img_bg"
+        app:layout_constraintTop_toBottomOf="@+id/top"
+        android:src="@drawable/img"/>
+
+    <TextView
+        android:id="@+id/tex1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shop by Category"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/mid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="10dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tex1"
+        app:layout_constraintBottom_toTopOf="@+id/navbar"
+        tools:listitem="@layout/activity_category_item"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#03A9F4"
+        app:menu="@menu/nav_menu"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
